@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import firebase from './firebase';
+import Notification from './firebaseNotifications/Notification'
 
 function App() {
-  const [token, setToken] = useState(''); 
-
-  useEffect(()=>{
-    const msg=firebase.messaging();
-    msg.requestPermission().then(()=>{
-      return msg.getToken();
-    }).then((data)=>{
-      console.warn("token",data);
-      setToken(data);
-    })
-  })
-
   return (
     <div className="App">
-      <h1>Notifica-me</h1>
-      <h3>mi token es</h3>
-      <h3>{token}</h3>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+      <Notification />
     </div>
   );
 }
