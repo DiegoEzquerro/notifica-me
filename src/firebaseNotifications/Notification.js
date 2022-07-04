@@ -20,7 +20,7 @@ const Notification = () => {
     }
   }, [notification])
 
-  requestForToken();
+ /// requestForToken();
 
   onMessageListener()
     .then((payload) => {

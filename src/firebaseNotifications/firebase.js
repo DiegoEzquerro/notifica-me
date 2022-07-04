@@ -36,6 +36,11 @@ export const requestForToken = () => {
     });
 };
 
+export async function fooToken() {
+  let token = await getToken(messaging, { vapidKey: 'BENCOO19TvsCqeofUWo31jmA9vRrEaoLBqf8gJsUin9XTlhlCwr3GAdVLeaE1aGfUlIP6fQvLy7OeJ_3R0wEKio' });
+  return token;
+}
+
 // Handle incoming messages. Called when:
 // - a message is received while the app has focus
 // - the user clicks on an app notification created by a service worker `messaging.onBackgroundMessage` handler.
@@ -45,5 +50,3 @@ export const onMessageListener = () =>
       resolve(payload);
     });
   });
-
-  
