@@ -44,6 +44,7 @@ messaging.onBackgroundMessage(function (payload) {
     console.info(event);
     console.info("payload.data['url']", payload.data['url']);
     //return clients.openWindow(payload.data['url']);
-    return clients.openWindow('http://localhost:3000/consumption-alert');
+    //return clients.openWindow('http://localhost:3000/consumption-alert');
+    return clients.openWindow('https://notifica-me.vercel.app/consumption-alert');
   });
 });
