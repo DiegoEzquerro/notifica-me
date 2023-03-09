@@ -14,6 +14,7 @@ function App() {
   })
   // comentario 1 en develop para prueba de git
   // comentario 2 en develop para prueba de git
+  // comentario 3 en develop para prueba de git
   function getTokenApp() {
     // Get registration token. Initially this makes a network call, once retrieved
     // subsequent calls to getToken will return from cache.
