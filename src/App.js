@@ -12,7 +12,7 @@ function App() {
     useEffect(()=>{
       getTokenApp();
   })
-
+  // comentario 1 en develop para prueba de git
   function getTokenApp() {
     // Get registration token. Initially this makes a network call, once retrieved
     // subsequent calls to getToken will return from cache.
