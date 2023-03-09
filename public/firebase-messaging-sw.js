@@ -40,8 +40,12 @@ messaging.onBackgroundMessage(function (payload) {
 
   // https://stackoverflow.com/questions/39418545/chrome-push-notification-how-to-open-url-adress-after-click
   self.addEventListener('notificationclick', function (event) {
+  //self.addEventListener('push', function (event) {
     console.info('--> notificationclick');
     console.info(event);
+
+    event.notification.close();
+
     console.info("payload.data['url']", payload.data['url']);
     //return clients.openWindow(payload.data['url']);
     //return clients.openWindow('http://localhost:3000/consumption-alert');
