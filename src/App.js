@@ -12,7 +12,7 @@ function App() {
     useEffect(()=>{
       getTokenApp();
   })
-  // comentario 1 en develop para prueba de git
+  // comentario 1 en develop para prueba de git, la modifico en develop
   // comentario 2 en develop para prueba de git
   // comentario 3 en develop para prueba de git
   function getTokenApp() {
